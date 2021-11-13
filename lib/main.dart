@@ -34,8 +34,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-   String rpcUrl = 'HTTP://127.0.0.1:7545';
-  String wsUrl = 'ws://127.0.0.1:7545/';
+   String rpcUrl = "http://127.0.0.1:7545";
+  String wsUrl = "ws://127.0.0.1:7545/";
   
   void sendEther() async {
     Web3Client client = Web3Client(rpcUrl, Client(), socketConnector: (){
@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'Ether:',
             ),
             
           ],
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: sendEther,
         tooltip: 'sendEther',
-        child: Icon(Icons.add),
+        child: Icon(Icons.send),
       ),
     );
   }
